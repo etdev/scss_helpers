@@ -1,10 +1,6 @@
-# scss_helpers
-
-A set of default mixins, variables etc. I use in Rails projects
-
 # What's included?
 
-Defaults
+#### Defaults
 
 * Font Size - Sane default values for responsive text sizing (from [typecast.com](http://typecast.com/blog/a-more-modern-scale-for-web-typography))
 * Fonts - Includes Google Web Fonts "montserrat" and "open sans".  Make sure to comment
@@ -24,7 +20,7 @@ This requires Bourbon.
 
 * Tags - Basic defaults for the html, body, a, ul, and li tags.
 
-Elements
+#### Elements
 
 * Color bar - A mixin for a full-width horizontal bar of a given color.
 
@@ -44,7 +40,11 @@ of arguments and create a horizontal bar of the given colors:
        li
 ```
 
-This will create this: 
+This is the resulting color bar:   
+
+![image](https://cloud.githubusercontent.com/assets/6726985/13217337/1cc78922-d9a5-11e5-9f41-9405c5a0e0c6.png)
+
+See [this codepen](http://codepen.io/etdev/pen/KVjode?editors=1100) for more info.
 
 # Dependencies
 * [Sass](https://github.com/sass/sass)
