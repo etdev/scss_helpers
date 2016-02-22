@@ -1,0 +1,30 @@
+// color bar with variable number of colors
+// ex: http://codepen.io/etdev/pen/KVjode
+
+// params:
+//   $height = height of the color bar in any format
+//   $colors... = list of colors in any format; The width of the bar will be
+// split horizontally into N sections where N is the number of colors in $colors
+
+// requires N li elements where N is the number of colors in $colors
+
+@mixin color-bar($height, $colors...) {
+  $elementCount: length($colors);
+  @for $i from 1 through $elementCount {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      li {
+        float: left;
+        display: inline-block;
+        width: ((1 /$elementCount) * 100%);
+        height: $height;
+      }
+    }
+    li:nth-child(#{$elementCount}n+#{$i}) {
+      background-color: nth($colors, $i);
+    }
+  }
+}
